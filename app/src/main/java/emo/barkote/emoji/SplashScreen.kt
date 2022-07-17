@@ -29,7 +29,7 @@ class SplashScreen : Fragment() {
                 activity?.supportFragmentManager?.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
             val navController = navHostFragment.navController
             navController.navigate(R.id.action_splashScreen_to_emoji, null,
-                navOptions { // Use the Kotlin DSL for building NavOptions
+                navOptions {
                     anim {
                         enter = android.R.animator.fade_in
                         exit = android.R.animator.fade_out
