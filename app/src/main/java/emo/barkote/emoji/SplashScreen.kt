@@ -12,7 +12,7 @@ class SplashScreen : Fragment() {
 
     private lateinit var binding: FragmentSplashScreeenBinding
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?): View {
        binding = FragmentSplashScreeenBinding.inflate(inflater,container,false)
 
 
