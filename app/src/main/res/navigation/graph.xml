@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/graph"
-    app:startDestination="@id/splashScreeen">
+    app:startDestination="@id/splashScreen">
 
 
     <fragment
-        android:id="@+id/splashScreeen"
-        android:name="emo.barkote.emoji.SplashScreeen"
+        android:id="@+id/splashScreen"
+        android:name="emo.barkote.emoji.SplashScreen"
         android:label="fragment_splash_screeen"
         tools:layout="@layout/fragment_splash_screeen" />
 </navigation>
