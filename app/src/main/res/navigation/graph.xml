@@ -10,5 +10,14 @@
         android:id="@+id/splashScreen"
         android:name="emo.barkote.emoji.SplashScreen"
         android:label="fragment_splash_screeen"
-        tools:layout="@layout/fragment_splash_screeen" />
+        tools:layout="@layout/fragment_splash_screeen" >
+        <action
+            android:id="@+id/action_splashScreen_to_emoji"
+            app:destination="@id/emoji" />
+    </fragment>
+    <fragment
+        android:id="@+id/emoji"
+        android:name="emo.barkote.emoji.Emoji"
+        android:label="fragment_emoji"
+        tools:layout="@layout/fragment_emoji" />
 </navigation>
