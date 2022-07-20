@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">emoji</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="emoji_logo">Emoji Logo</string>
+    <string name="confirm">Confirm</string>
+    <string name="exit">Do you want to exit</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">Ok</string>
 </resources>
