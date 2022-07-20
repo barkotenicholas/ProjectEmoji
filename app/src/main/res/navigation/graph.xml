@@ -19,5 +19,7 @@
         android:id="@+id/emoji"
         android:name="emo.barkote.emoji.Emoji"
         android:label="fragment_emoji"
-        tools:layout="@layout/fragment_emoji" />
+        tools:layout="@layout/fragment_emoji" >
+
+    </fragment>
 </navigation>
