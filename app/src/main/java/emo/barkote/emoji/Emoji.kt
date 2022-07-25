@@ -2,17 +2,16 @@ package emo.barkote.emoji
 
 import android.content.DialogInterface
 import android.os.Bundle
+import android.text.InputFilter
+import android.text.Spanned
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
-import androidx.activity.addCallback
 import androidx.appcompat.app.AlertDialog
-import com.vanniktech.emoji.EmojiPopup
 import emo.barkote.emoji.databinding.FragmentEmojiBinding
-import kotlinx.coroutines.NonCancellable.cancel
 
 class Emoji : Fragment() {
 
@@ -62,8 +61,33 @@ class Emoji : Fragment() {
 
 
 
+        val lengthFilter = InputFilter.LengthFilter(4)
+        binding.emojiInput.filters = arrayOf(EmojiFilter(),lengthFilter)
+
 
         return binding.root
+    }
+
+    inner class EmojiFilter : InputFilter{
+        override fun filter(source: CharSequence?,start: Int,end: Int,dest: Spanned?,dstart: Int,dend: Int): CharSequence {
+
+            if(source ==  null || source.isBlank()){
+                return ""
+            }
+
+            val validTypes = listOf(Character.SURROGATE,Character.OTHER_SYMBOL,Character.NON_SPACING_MARK).map { it.toInt() }
+
+            for(inputType in source){
+              val type =  Character.getType(inputType)
+
+                if(!validTypes.contains(type)){
+                    Toast.makeText(context,"Only emojis are allowed ",Toast.LENGTH_SHORT).show()
+                    return ""
+                }
+            }
+            return source
+        }
+
     }
 
 }
