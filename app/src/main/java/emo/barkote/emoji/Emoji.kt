@@ -61,11 +61,26 @@ class Emoji : Fragment() {
 
 
 
-        val lengthFilter = InputFilter.LengthFilter(4)
+        val lengthFilter = InputFilter.LengthFilter(3)
         binding.emojiInput.filters = arrayOf(EmojiFilter(),lengthFilter)
 
+        binding.button.setOnClickListener{
+            if(validateInfo()){
+
+            }
+        }
 
         return binding.root
+    }
+
+    private fun validateInfo(): Boolean {
+        val text = binding.emojiInput.text.toString()
+        return if(text.isEmpty()){
+            binding.emojiInput.error = "Please Input Emoji"
+            false
+        }else{
+            true
+        }
     }
 
     inner class EmojiFilter : InputFilter{
