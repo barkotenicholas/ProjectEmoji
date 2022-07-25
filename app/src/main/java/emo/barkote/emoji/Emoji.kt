@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.addCallback
 import androidx.appcompat.app.AlertDialog
+import com.vanniktech.emoji.EmojiPopup
 import emo.barkote.emoji.databinding.FragmentEmojiBinding
 import kotlinx.coroutines.NonCancellable.cancel
 
